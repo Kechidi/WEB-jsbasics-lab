@@ -4,7 +4,7 @@
  * @param {Number} i
  */
 export const isNumberEven = i => {
-  // TODO
+  return i % 2 == 0;
 };
 
 /**
@@ -13,7 +13,8 @@ export const isNumberEven = i => {
  * @param {String} str
  */
 export const getFileExtension = str => {
-  // TODO
+  var file = str.split('.').pop(); // stocker dans une variable 
+  return str.split('.').length>1 ? file : false;  
 };
 
 /**
@@ -23,7 +24,8 @@ export const getFileExtension = str => {
  * @param {String} arr
  */
 export const longestString = arr => {
-  // TODO
+   
+    
 };
 
 /**
