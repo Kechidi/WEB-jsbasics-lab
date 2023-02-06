@@ -9,6 +9,7 @@ import {
   aplatirRecursif,
   permutations,
   echantillon,
+  enumerer,
  
 
 
@@ -308,9 +309,21 @@ describe('JS Basics Tests', () => {
    * Attention aux cas particuliers (tableaux à 0, 1 ou 2 éléments.)
    */
   describe('Test enumerer', () => {
-    // TODO
-   
+    test('tableau vide', () => {
+      expect(enumerer([], ',', 'et')).toEqual('');
+    });
 
+    test('tableau à un element', () => {
+      expect(enumerer(['Riri'], ',', 'et')).toEqual('Riri');
+    });
+
+    test('tableau à 2 éléments', () => {
+      expect(enumerer(['Riri','Fifi'], ',', ' et ')).toEqual('Riri et Fifi');
+    });
+
+    test('tableau à plusieurs éléments', () => {
+      expect(enumerer(['Riri','Fifi', 'Loulou'], ', ', ' et ')).toEqual('Riri, Fifi et Loulou');
+    });
     
   });
 
