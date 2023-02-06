@@ -258,7 +258,35 @@ describe('JS Basics Tests', () => {
    */
   describe('Test echantillon', () => {
     // TODO
-    
+    test('tableau vide' , ()=>{
+      expect(echantillon([])).toEqual();
+    });
+
+    test ('tableau avec un seul element', ()=>{
+      expect(echantillon([1])).toEqual(1);
+    });
+
+    test('tableau avec 2 element retourne le premier ',()=>{
+      const mockMath = Object.create(global.Math);
+      mockMath.random = () => 0.0;
+      global.Math = mockMath;
+      expect(echantillon([1,2])).toEqual(1);
+    });
+
+    test("tableau avec 2 element retourner le dernier ", () =>{
+      const mockMath = Object.create(global.Math);
+      mockMath.random = () => 0.9;
+      global.Math = mockMath;
+      expect(echantillon([1,2,3])).toEqual(3);
+    });
+
+    test("tableau a 3 ou plusieurs elements retourner l'élément au milieu du tableau", () =>{
+      const mockMath = Object.create(global.Math);
+      mockMath.random = () => 0.5;
+      global.Math = mockMath;
+      expect(echantillon([1,2,3])).toEqual(2);
+    });
+
   });
 
   /**
