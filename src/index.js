@@ -188,6 +188,18 @@ export const echantillon = tab => tab[Math.floor(Math.random() * tab.length)];
  */
 export const enumerer = (tab, separateur = ', ', fin = separateur) => {
   // TODO
+  var string = "";
+  for (var i = 0; i < tab.length; i++) {
+      if (i === 0) {
+        string += tab[i];
+      } else if (i === tab.length - 1) {
+        string += fin + tab[i];
+      } else {
+        string += separateur + tab[i];
+      }
+  }
+  return string;
+  
 };
 
 /**
