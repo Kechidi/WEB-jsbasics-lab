@@ -8,7 +8,7 @@
 
 |Nom|Prénom|login|email|
 |--|--|--|--|
-| *Nom auteur* | *Prénom auteur*| *login auteur* | *email auteur* |
+| *kechidi* | *thiziri*| *kt176596* | *thiziri.kechidi@etu.univ-lehavre.fr* |
 
 ## Travail à réaliser
 
