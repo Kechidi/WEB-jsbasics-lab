@@ -120,6 +120,19 @@ return tab;
  */
 export const aplatirRecursif = tab => {
   //TODO
+  var tabConcat =[];
+  for (var i = 0; i < tab.length; i++) 
+  {
+    if (Array.isArray(tab[i])) 
+    {
+      tabConcat = tabConcat.concat(aplatirRecursif(tab[i]));
+    }
+    else 
+    {
+      tabConcat.push(tab[i]);
+    }
+  }
+  return tabConcat;
 };
 
 /**
