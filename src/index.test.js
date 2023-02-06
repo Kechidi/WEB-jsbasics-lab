@@ -206,6 +206,45 @@ describe('JS Basics Tests', () => {
    */
   describe('Test permutations', () => {
     // TODO
+    test('tableau vide', () => {
+      expect(permutations([])).toEqual([]);
+
+    });
+    test('tableau avec un seul element', () => {
+      const monTab = [1];
+      const attendu = [1];
+      expect(permutations(monTab)).toEqual(attendu);
+    });
+
+    test('tableau avec 2 elements', () => {
+      const monTab = [1,2];
+      const attendu = [1,2];
+      const attendu2 = [2,1];
+      expect(permutations(monTab)).toEqual([attendu,attendu2]);
+    });
+
+    test('tableau avec 2 meme elements', () => {
+      const monTab = [1,1];
+      const attendu = [1,1];
+      const attendu2 = [1,1];
+      expect(permutations(monTab)).toEqual([attendu,attendu2]);
+    });
+    test('tableau a plusieurs elements', () => {
+      const monTab = [1,2,3];
+      expect(permutations(monTab)).toEqual([ [1, 2, 3],[ 1, 3, 2 ],[ 2, 1, 3 ],[ 2, 3, 1 ],[ 3, 1, 2 ],[ 3, 2, 1 ]]);
+    });
+
+    test('tableau a plusieurs elements avec doublons', () =>{
+      const monTab = [1,2,2];
+      expect(permutations(monTab)).toEqual([[1,2,2],[1,2,2],[2,1,2],[2,2,1],[2,1,2],[2,2,1]]);
+    });
+
+    test('tableau a plusieurs case qui contient toutes le meme element ',()=>{
+      const monTab = [1,1,1];
+      expect(permutations(monTab)).toEqual([[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]]);
+    });
+
+
   });
 
   /**
@@ -219,6 +258,7 @@ describe('JS Basics Tests', () => {
    */
   describe('Test echantillon', () => {
     // TODO
+    
   });
 
   /**
