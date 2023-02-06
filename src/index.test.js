@@ -8,6 +8,10 @@ import {
   retireDe,
   aplatirRecursif,
   permutations,
+  echantillon,
+ 
+
+
 } from '../src';
 
 describe('JS Basics Tests', () => {
@@ -286,6 +290,8 @@ describe('JS Basics Tests', () => {
       global.Math = mockMath;
       expect(echantillon([1,2,3])).toEqual(2);
     });
+     
+
 
   });
 
@@ -303,6 +309,9 @@ describe('JS Basics Tests', () => {
    */
   describe('Test enumerer', () => {
     // TODO
+   
+
+    
   });
 
   /**
@@ -322,5 +331,10 @@ describe('JS Basics Tests', () => {
    */
   describe('Test nMax', () => {
     // TODO
+   
   });
+
+
+
+ 
 });
