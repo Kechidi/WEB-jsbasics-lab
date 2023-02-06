@@ -91,7 +91,20 @@ export const nestedSum = arr => {
  * @param  {objects} elms
  */
 export const retireDe = (tab, ...elms) => {
-  // TODO
+  for (let i = 0; i < elms.length; i++) { 
+    for (let index = 0; index < tab.length; index++) {
+      let element = tab[index];
+      if (element == elms[i]) {
+        tab.splice(index, 1);
+
+      }
+
+    }
+} 
+return tab;
+
+
+
 };
 
 /**
