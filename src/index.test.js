@@ -311,7 +311,7 @@ describe('JS Basics Tests', () => {
    */
   describe('Test enumerer', () => {
     test('tableau vide', () => {
-      expect(enumerer([], ',', 'et')).toEqual('');
+      expect(enumerer([])).toEqual('');
     });
 
     test('tableau à un element', () => {
