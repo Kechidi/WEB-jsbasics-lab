@@ -63,7 +63,13 @@ export const isPalindrome = str => {
  * Return the sum all the numbers you find, anywhere in the nest of arrays.
  */
 export const nestedSum = arr => {
-  // TODO
+  var tabInt = arr.flat(Infinity).filter(entier => typeof entier === "number");
+  if (tabInt.length != 0) {
+    return tabInt.reduce((previous, current) => (previous + current)); 
+  }
+
+  return 0;
+  
 };
 
 /**
@@ -85,7 +91,20 @@ export const nestedSum = arr => {
  * @param  {objects} elms
  */
 export const retireDe = (tab, ...elms) => {
-  // TODO
+  for (let i = 0; i < elms.length; i++) { 
+    for (let index = 0; index < tab.length; index++) {
+      let element = tab[index];
+      if (element == elms[i]) {
+        tab.splice(index, 1);
+
+      }
+
+    }
+} 
+return tab;
+
+
+
 };
 
 /**
