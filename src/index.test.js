@@ -10,6 +10,7 @@ import {
   permutations,
   echantillon,
   enumerer,
+  nMax
  
 
 
@@ -344,10 +345,20 @@ describe('JS Basics Tests', () => {
    */
   describe('Test nMax', () => {
     // TODO
-   
-  });
+    test('Tableau simple et le plus grand nombre', () => {
+      expect(nMax([2, 1, 3])).toEqual([3]);
+    });
+    test('Tableau simple et les 2 plus grands nombres', () => {
+      expect(nMax([1, 2, 3], 20)).toEqual([1,2,3]);
+    });
+    test('Tableau string et number et les 2 plus grands nombres', () => {
+      expect(nMax(['1', '2', 3], 2)).toEqual([3]);
+    });
+    test('Tableau de string et les 2 plus grands nombres', () => {
+      expect(nMax(['1', '2', '3'], 2)).toEqual([]);
+    });
 
-
-
+    });
+ 
  
 });

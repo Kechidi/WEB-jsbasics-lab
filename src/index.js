@@ -211,6 +211,5 @@ export const enumerer = (tab, separateur = ', ', fin = separateur) => {
  */
 export const nMax = (tab, n = 1) => {
   //TODO
-  var tri = tab.sort(function (a, b) { return b - a });
-  return tri.slice(0, n);
+  return [...tab].sort().slice(tab.length - n, tab.length).filter((elmt) => typeof elmt === 'number');
 };
